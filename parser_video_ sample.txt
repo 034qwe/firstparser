@@ -1,0 +1,6 @@
+r = requests.get(url, stream=True)
+
+with open('1.mp4', 'wb') as fw:
+    for i in r.iter_content(chunk_size=1024 * 100):
+        fw.write(i)
+ 
