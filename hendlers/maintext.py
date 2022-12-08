@@ -8,7 +8,7 @@ from keyboards.lang_kb import language
 async def wiki_main_text(message:types.Message):
 
     text = message.text.replace("/search",'').replace('\n','').replace(' ','_')
-    print(text)
+    print(language)
 
     headers = {
                 'User-Agent': UserAgent().random
@@ -30,6 +30,7 @@ async def wiki_main_text(message:types.Message):
                 break
     except:
         await message.answer('nothing was found')
+    
        
 def register_handlers_maintext(dp:Dispatcher):
     dp.register_message_handler(wiki_main_text,commands=['search'])
