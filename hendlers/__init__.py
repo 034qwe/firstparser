@@ -1,2 +1,2 @@
-from hendlers import maintext
+from hendlers import wiki
 from hendlers import other
