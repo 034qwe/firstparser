@@ -12,11 +12,10 @@ async def rework_text(message:types.Message):
     url ="https://www.deepl.com/ru/translator#ru/en/привет"
     r = requests.get(url=url,headers=headers)
     soup = BeautifulSoup(r.text,'lxml')
-    a = soup.find('div',class_='lmt__translations_as_text').contents
+    a = soup.find('div',class_='lmt__translations_as_text')
 
     await message.answer(a)
-
-        
+ 
 
 def register_handlers_rework(dp:Dispatcher):
     dp.register_message_handler(rework_text,commands=['rework'])

@@ -1,6 +1,6 @@
 from aiogram.utils import executor
 from create_bot import dp
-from hendlers import other, wiki,youtube,rework_text
+from hendlers import other, wiki,rework_text
 from keyboards import lang_kb
 
 async def on_startup(_):
