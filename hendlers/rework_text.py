@@ -9,14 +9,14 @@ headers = {
             }
 async def rework_text(message:types.Message):
     text = message.text.replace('/rework','')
-    url ="https://translate.google.com/?hl=ru&sl=auto&tl=ru&text=%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82&op=translate"
+    url ="https://www.deepl.com/ru/translator#ru/en/привет"
     r = requests.get(url=url,headers=headers)
     soup = BeautifulSoup(r.text,'lxml')
-    a = soup.find('div',class_='QcsUad BDJ8fb')
-    print(a)
-    await message.answer('1234')
+    a = soup.find('div',class_='lmt__translations_as_text').contents
 
-    
+    await message.answer(a)
+
+        
 
 def register_handlers_rework(dp:Dispatcher):
     dp.register_message_handler(rework_text,commands=['rework'])
