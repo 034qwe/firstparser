@@ -12,7 +12,7 @@ headers = {
 
 async def r_text(message:types.Message):
     text = message.text.replace('/rework','')
-    url = f'https://www.deepl.com/ru/translator#ru/en/{text}'
+    url = f'https://www.deepl.com/ru/translator#uk/en/{text}'
 
     try:
         driver = webdriver.Chrome(executable_path="D:/programer/projects/firstparser-main/firstparser-main/firstparser\selenium/chromedriver.exe")
