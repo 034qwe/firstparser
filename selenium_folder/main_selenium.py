@@ -37,7 +37,7 @@ async def r_text(message:types.Message):
         await message.answer(answ.text)
 
     except:
-        print('bad')
+        await message.answer('error,try again')
 
     finally:
         driver.close()

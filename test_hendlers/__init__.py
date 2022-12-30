@@ -1,2 +1,2 @@
-from hendlers import wiki
-from hendlers import other
+from test_hendlers import wiki
+from test_hendlers import other
