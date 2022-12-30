@@ -1,6 +1,5 @@
 from selenium import webdriver
 import time 
-import requests
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 from aiogram import types,Dispatcher

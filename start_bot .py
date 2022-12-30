@@ -1,6 +1,6 @@
 from aiogram.utils import executor
 from create_bot import dp
-from hendlers import other, wiki
+from test_hendlers import other, wiki
 from keyboards import lang_kb
 from selenium_folder import main_selenium
 
