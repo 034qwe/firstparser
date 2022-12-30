@@ -6,7 +6,7 @@ from aiogram import types,Dispatcher
 
 
 async def translator(message:types.Message):
-    text = message.text.replace('/translation','')
+    text = message.text.replace('/trnsl','')
 
     url = f'https://www.deepl.com/ru/translator#ru/zh/{text}'
 
@@ -19,3 +19,7 @@ async def translator(message:types.Message):
     a = soup.find('div',class_='lmt__textarea lmt__textarea_dummydiv',id='target-dummydiv')
 
     await message.answer(a.text)
+
+
+def register_handlers_trnsl(dp: Dispatcher):
+    dp.register_message_handler(translator,commands=['trnsl'])

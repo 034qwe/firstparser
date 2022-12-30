@@ -8,7 +8,11 @@ async def hello_send(message:types.Message):
 async def change_lang(message: types.Message):
     await message.answer('select your language',reply_markup=change_kb)
 
+async def get_help(message:types.Message):
+    await message.answer('My command list:/search,/trnsl,/rework')
+
 
 def register_handlers_other(dp: Dispatcher):
     dp.register_message_handler(hello_send,commands=['start'])
     dp.register_message_handler(change_lang,commands=['remove_lang'])
+    dp.register_message_handler(get_help,commands=['help'])
